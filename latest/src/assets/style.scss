@@ -1,4 +1,47 @@
-.search-form{
-    height: 50%;
-    width: 50%;
+//header search form
+body {
+  margin: 0;
+}
+.search-form {
+  height: 50%;
+  width: 50%;
+}
+
+//side bar logo
+.logo {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  h1 {
+    font-size: 1rem;
+    color: white;
+  }
+  img {
+    width: 72px;
+    height: 40px;
+    object-fit: cover;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    span {
+      font-size: 1rem;
+      color: black;
+      line-height: 1;
+    }
+  }
 }
