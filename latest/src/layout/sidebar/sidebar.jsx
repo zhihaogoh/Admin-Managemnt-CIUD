@@ -1,14 +1,14 @@
 import {
   DashboardFilled,
-  LogoutOutlined,
+
   OrderedListOutlined,
   ProductFilled,
-  UploadOutlined,
-  UserAddOutlined,
+    UserAddOutlined,
   UserOutlined,
-  VideoCameraOutlined,
+
 } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
+import PropTypes from "prop-types";
 
 const { Sider } = Layout;
 export default function Sidebar({ collapsed }) {
@@ -64,3 +64,6 @@ export default function Sidebar({ collapsed }) {
     </>
   );
 }
+Sidebar.propTypes = {
+  collapsed: PropTypes.bool.isRequired,
+};

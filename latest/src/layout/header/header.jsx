@@ -6,6 +6,7 @@ import {
 import { Button, Input, Layout, theme } from "antd";
 import DropDown from "../../components/DropDownMenu/drop_down";
 import profileLogo from "../../assets/image/HavanLogo.png";
+import PropTypes from "prop-types";
 
 const { Header } = Layout;
 export default function AdminHeader({ collapsed, setCollapsed }) {
@@ -19,7 +20,8 @@ export default function AdminHeader({ collapsed, setCollapsed }) {
           padding: 0,
           background: colorBgContainer,
           display: "grid",
-          gridTemplateColumns: "minmax(64px, 1fr) minmax(0, 2fr) minmax(64px, 1fr)",
+          gridTemplateColumns:
+            "minmax(64px, 1fr) minmax(0, 2fr) minmax(64px, 1fr)",
           alignItems: "center",
         }}
       >
@@ -41,12 +43,18 @@ export default function AdminHeader({ collapsed, setCollapsed }) {
           placeholder="Search, items, orders ..."
           prefix={<SearchOutlined />}
         />
-        <div className="profile" style={{ justifySelf: "end", marginRight: 16 }}>
-          <DropDown
-            img={profileLogo}
-          />
+        <div
+          className="profile"
+          style={{ justifySelf: "end", marginRight: 16 }}
+        >
+          <DropDown img={profileLogo} account={"Abc"} position={"Director"} />
         </div>
       </Header>
     </>
   );
 }
+
+AdminHeader.propTypes = {
+  collapsed: PropTypes.bool.isRequired,
+  setCollapsed: PropTypes.func.isRequired,
+};

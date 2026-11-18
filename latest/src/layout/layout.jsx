@@ -9,7 +9,7 @@ import { Outlet } from "react-router";
 
 const {  Content } = Layout;
 
-export default function AdminLayout({children}) {
+export default function AdminLayout() {
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -37,3 +37,4 @@ export default function AdminLayout({children}) {
     </Layout>
   );
 }
+

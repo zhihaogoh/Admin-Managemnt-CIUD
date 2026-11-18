@@ -1,5 +1,7 @@
 import { DownOutlined, SettingOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
+import PropTypes from "prop-types";
+
 const items = [
   {
     key: "1",
@@ -26,21 +28,27 @@ const items = [
     extra: "⌘S",
   },
 ];
-export default function DropDown({img}) {
+export default function DropDown({ account, position, img }) {
   return (
     <>
-     <img className="m-3" src={img} alt={img} />
-     <div className="account">
-        <span>Abc</span>
-        <span>Director</span>
-     </div>
-    <Dropdown menu={{ items }}>
-      <a onClick={(e) => e.preventDefault()}>
-        <Space>
-          <DownOutlined />
-        </Space>
-      </a>
-    </Dropdown>
+      <img className="m-3" src={img} alt={img} />
+      <div className="account">
+        <span>{account}</span>
+        <span>{position}</span>
+      </div>
+      <Dropdown menu={{ items }}>
+        <a onClick={(e) => e.preventDefault()}>
+          <Space>
+            <DownOutlined />
+          </Space>
+        </a>
+      </Dropdown>
     </>
   );
+}
+
+DropDown.propTypes ={
+    account: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    position: PropTypes.string.isRequired
 }
