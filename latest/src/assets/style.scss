@@ -22,7 +22,7 @@ body {
     object-fit: cover;
   }
 }
-
+//dropdowm account menu
 .profile {
   display: flex;
   align-items: center;
@@ -43,5 +43,16 @@ body {
       color: black;
       line-height: 1;
     }
+  }
+}
+
+//title
+.title{
+  h2{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
   }
 }
