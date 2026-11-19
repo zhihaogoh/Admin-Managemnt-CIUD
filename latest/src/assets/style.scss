@@ -47,8 +47,8 @@ body {
 }
 
 //title
-.title{
-  h2{
+.title {
+  h2 {
     color: black;
     font-size: 1.5rem;
     font-weight: bold;
@@ -58,15 +58,99 @@ body {
 }
 
 //subtitle
-.subtitle{
+.subtitle {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  p{
+  p {
     color: black;
     font-size: 1rem;
     font-weight: 300;
     line-height: 1;
   }
+}
+
+//card report
+.card_report {
+  border: 1px solid #ddd;
+  .ant-card-body {
+    padding: 1rem;
+  }
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    .subtitle {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      h2 {
+        color: grey;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1;
+        margin: 0;
+      }
+    }
+    .icon {
+      font-size: 2rem;
+    }
+  }
+  .percentage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    .percentages{
+      border-radius:5px ;
+      padding: 0.25rem 0.5rem;
+      background-color: greenyellow;
+    }
+    span{
+       color: #000;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        margin: 0;
+    }
+  }
+  .report_detail{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background-color: paleturquoise;
+    span{
+         color: #000;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        margin: 0;
+    }
+  }
+   .status{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    span{
+      padding: 1rem;
+       color: #000;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        margin: 0;
+    }
+  }
+
+  
 }

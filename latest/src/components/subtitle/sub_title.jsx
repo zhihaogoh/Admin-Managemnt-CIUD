@@ -13,7 +13,7 @@ export default function Subtitle({ detail, button }) {
           const Icon = item.icon; //设置icon 的data
           return (
             <Button key={index} icon={<Icon />}>
-              item.name
+              {item.name}
             </Button>
           );
         })}
