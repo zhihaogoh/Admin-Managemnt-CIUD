@@ -56,3 +56,17 @@ body {
     margin: 0;
   }
 }
+
+//subtitle
+.subtitle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  p{
+    color: black;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1;
+  }
+}

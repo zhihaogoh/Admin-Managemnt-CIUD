@@ -31,7 +31,7 @@ const items = [
 export default function DropDown({ account, position, img }) {
   return (
     <>
-      <img className="m-3" src={img} alt={img} />
+      <img src={img} alt={img} />
       <div className="account">
         <span>{account}</span>
         <span>{position}</span>
