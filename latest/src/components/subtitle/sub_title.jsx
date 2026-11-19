@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import Datepicker from "../Datepicker/datepicker";
 import { Button } from "antd";
-import RefIcon from "@ant-design/icons/es/icons/AccountBookFilled";
 
 export default function Subtitle({ detail, button }) {
   return (
