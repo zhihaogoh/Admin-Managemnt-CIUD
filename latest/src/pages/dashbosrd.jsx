@@ -10,6 +10,7 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import CardReport from "../components/card/card_report";
+import CardProgressReport from "../components/card/card_progress_report";
 
 export default function Dashboard() {
   return (
@@ -38,7 +39,7 @@ export default function Dashboard() {
             total_amount: 184902.5,
             icon: MoneyCollectFilled,
             percentage: 84,
-            sub: "vs last month",
+            sub: "Vs last month",
             report_detail: "Settled Trans.",
             report_detail_data: "1,420 orders",
           },
@@ -48,7 +49,7 @@ export default function Dashboard() {
             subtitle: "Units",
             icon: DeliveredProcedureOutlined,
             percentage: 84,
-            sub: "monthly velocity",
+            sub: "Monthly velocity",
             warring: "142 packing",
             success: "38 pick up",
             danger: "12 Hold",
@@ -67,9 +68,34 @@ export default function Dashboard() {
             subtitle: "Accounts",
             icon: UserOutlined,
             percentage: 84,
-            sub: "new this month",
+            sub: "New this month",
             report_detail: "B2B Corporate Tier",
             report_detail_data: "342 Enterprise",
+          },
+        ]}
+      />
+      <CardProgressReport
+        title="Order Fulfillment Pipeline Status"
+        order_status={[
+          {
+            total: 142,
+            status: "Pending pack",
+            sub_status: "42 priority rush",
+          },
+          {
+            total: 620,
+            status: "In Transit",
+            sub_status: "FedEx / DHL hubs",
+          },
+          {
+            total: 188,
+            status: "Out for Delivery",
+            sub_status: "Courier dispatched",
+          },
+          {
+            total: 142,
+            status: "Delivered Today",
+            sub_status: "100% on schedule",
           },
         ]}
       />
