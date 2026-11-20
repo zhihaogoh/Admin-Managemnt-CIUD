@@ -7,7 +7,7 @@ export default function Subtitle({ detail, button }) {
     <div className="subtitle my-3">
       <p>{detail}</p>
       {/* display only laptop 15' */}
-      <div className="d-none d-xl-block">
+      <div className="d-none d-xl-flex gap-3">
         <Datepicker />
         {button.map((item, index) => {
           const Icon = item.icon; //设置icon 的data
