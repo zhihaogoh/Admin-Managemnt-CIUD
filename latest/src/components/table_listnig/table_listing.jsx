@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Title from "../title/title";
-import { Flex, Space, Table, Tag } from "antd";
+import { Table } from "antd";
 // const columns = [
 //   {
 //     title: "Name",
@@ -49,35 +49,35 @@ import { Flex, Space, Table, Tag } from "antd";
 //     ),
 //   },
 // ];
-const data = [
-  {
-    key: "1",
-    name: "John Brown",
-    age: 32,
-    address: "New York No. 1 Lake Park",
-    tags: ["nice", "developer"],
-  },
-  {
-    key: "2",
-    name: "Jim Green",
-    age: 42,
-    address: "London No. 1 Lake Park",
-    tags: ["kawaii"],
-  },
-  {
-    key: "3",
-    name: "Joe Black",
-    age: 32,
-    address: "Sydney No. 1 Lake Park",
-    tags: ["cool", "teacher"],
-  },
-];
-export default function TableListing({ title , columns }) {
+// const data = [
+//   {
+//     key: "1",
+//     name: "John Brown",
+//     age: 32,
+//     address: "New York No. 1 Lake Park",
+//     tags: ["nice", "developer"],
+//   },
+//   {
+//     key: "2",
+//     name: "Jim Green",
+//     age: 42,
+//     address: "London No. 1 Lake Park",
+//     tags: ["kawaii"],
+//   },
+//   {
+//     key: "3",
+//     name: "Joe Black",
+//     age: 32,
+//     address: "Sydney No. 1 Lake Park",
+//     tags: ["cool", "teacher"],
+//   },
+// ];
+export default function TableListing({ title, columns, data, rowKey = "key" }) {
   return (
     <>
       <div className="py-3 table_llisting">
         <Title title={title} />
-        <Table columns={columns} dataSource={data} />;
+        <Table columns={columns} dataSource={data} rowKey={rowKey} />
       </div>
     </>
   );
@@ -85,12 +85,22 @@ export default function TableListing({ title , columns }) {
 
 TableListing.propTypes = {
   title: PropTypes.string.isRequired,
+  rowKey: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   columns: PropTypes.arrayOf(
     PropTypes.shape({
-        title : PropTypes.string.isRequired,
-        dataIndex: PropTypes.element.isRequired,
-        key: PropTypes.element.isRequired,
-        render: PropTypes.element.isRequired
-    })
-  )
+      title: PropTypes.string.isRequired,
+      dataIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+      key: PropTypes.string.isRequired,
+      render: PropTypes.func,
+    }),
+  ),
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      order_id: PropTypes.string.isRequired,
+      customer: PropTypes.string.isRequired,
+      items: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      status: PropTypes.string.isRequired,
+    }),
+  ),
 };

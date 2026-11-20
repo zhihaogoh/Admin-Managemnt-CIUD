@@ -107,6 +107,7 @@ export default function Dashboard() {
       />
       <TableListing
         title="Recent High-Priority Orders"
+        rowKey="order_id"
         columns={[
           {
             title: "Order ID",
@@ -128,6 +129,7 @@ export default function Dashboard() {
             title: "Price",
             dataIndex: "price",
             key: "price",
+            render: (price) => price.toFixed(2),
           },
           {
             title: "Status",
@@ -137,14 +139,36 @@ export default function Dashboard() {
           {
             title: "Action",
             key: "action",
-            render: (_, record) => {
+            render: () => (
               <Space size="medium">
-                <Button className={record}>Action</Button>
-              </Space>;
-            },
+                <Button>Action</Button>
+              </Space>
+            ),
           },
         ]}
-        
+        data={[
+          {
+            order_id: "#PO001",
+            customer: "ABC",
+            items: "2 pkg",
+            price: 194.9,
+            status: "Pending Pack",
+          },
+          {
+            order_id: "#PO001",
+            customer: "ABC",
+            items: "2 pkg",
+            price: 194.9,
+            status: "Pending Pack",
+          },
+          {
+            order_id: "#PO001",
+            customer: "ABC",
+            items: "2 pkg",
+            price: 194.9,
+            status: "Pending Pack",
+          },
+        ]}
       />
     </>
   );
