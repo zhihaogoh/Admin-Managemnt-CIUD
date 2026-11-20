@@ -238,6 +238,18 @@ body {
           font-weight: bold;
         }
       }
+      .pending{
+        background: goldenrod;
+      }
+      .transmit{
+        background: #4aa3f1;
+      }
+      .delivery{
+        background: plum;
+      }
+      .success{
+        background: green;
+      }
       .status {
         p {
           margin: 0;
@@ -247,7 +259,7 @@ body {
           font-weight: 300;
         }
         h4 {
-          margin: 0;
+          margin: 0 0 0.25rem;
           color: gray;
           font-size: 1rem;
           line-height: 1;
@@ -262,7 +274,7 @@ body {
     }
   }
 
-  @container (min-width: 720px) {
+  @container (min-width: 992px) {
     .card_progress_status_grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }

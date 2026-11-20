@@ -11,6 +11,8 @@ import {
 } from "@ant-design/icons";
 import CardReport from "../components/card/card_report";
 import CardProgressReport from "../components/card/card_progress_report";
+import TableListing from "../components/table_listnig/table_listing";
+import { Button, Space } from "antd";
 
 export default function Dashboard() {
   return (
@@ -78,26 +80,71 @@ export default function Dashboard() {
         title="Order Fulfillment Pipeline Status"
         order_status={[
           {
+            status_type: "pending",
             total: 142,
             status: "Pending pack",
             sub_status: "42 priority rush",
           },
           {
+            status_type: "transmit",
             total: 620,
             status: "In Transit",
             sub_status: "FedEx / DHL hubs",
           },
           {
+            status_type: "delivery",
             total: 188,
             status: "Out for Delivery",
             sub_status: "Courier dispatched",
           },
           {
+            status_type: "success",
             total: 142,
             status: "Delivered Today",
             sub_status: "100% on schedule",
           },
         ]}
+      />
+      <TableListing
+        title="Recent High-Priority Orders"
+        columns={[
+          {
+            title: "Order ID",
+            dataIndex: "order_id",
+            key: "order_id",
+            render: (text) => <a>{text}</a>,
+          },
+          {
+            title: "Customer",
+            dataIndex: "customer",
+            key: "customer",
+          },
+          {
+            title: "Items",
+            dataIndex: "items",
+            key: "items",
+          },
+          {
+            title: "Price",
+            dataIndex: "price",
+            key: "price",
+          },
+          {
+            title: "Status",
+            dataIndex: "status",
+            key: "status",
+          },
+          {
+            title: "Action",
+            key: "action",
+            render: (_, record) => {
+              <Space size="medium">
+                <Button className={record}>Action</Button>
+              </Space>;
+            },
+          },
+        ]}
+        
       />
     </>
   );
