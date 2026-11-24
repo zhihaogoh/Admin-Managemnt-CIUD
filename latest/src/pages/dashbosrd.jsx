@@ -23,7 +23,7 @@ export default function Dashboard() {
         detail={
           "Real-time telemetry, core business metrics, fulfillment health, and recent warehouse activities."
         }
-        datePicker = {true}
+        datePicker={true}
         button={[
           {
             name: "Refresh",
