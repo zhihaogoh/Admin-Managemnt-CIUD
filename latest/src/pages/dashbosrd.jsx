@@ -1,7 +1,7 @@
 import BreadCrumb from "../components/Breadcrumb/breadcrumb";
 import Title from "../components/title/title";
 import Subtitle from "../components/subtitle/sub_title";
-import RefIcon from "@ant-design/icons/es/icons/AccountBookFilled";
+import RefIcon from "@ant-design/icons/es/icons/HistoryOutlined";
 import {
   DeliveredProcedureOutlined,
   DownloadOutlined,
@@ -23,6 +23,7 @@ export default function Dashboard() {
         detail={
           "Real-time telemetry, core business metrics, fulfillment health, and recent warehouse activities."
         }
+        datePicker = {true}
         button={[
           {
             name: "Refresh",

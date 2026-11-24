@@ -2,13 +2,14 @@ import PropTypes from "prop-types";
 import Datepicker from "../Datepicker/datepicker";
 import { Button } from "antd";
 
-export default function Subtitle({ detail, button }) {
+export default function Subtitle({ detail, button, datePicker }) {
+  console.log(datePicker)
   return (
     <div className="subtitle my-3">
       <p>{detail}</p>
       {/* display only laptop 15' */}
       <div className="d-none d-xl-flex gap-3">
-        <Datepicker />
+         {datePicker === true ? <Datepicker /> : ""}
         {button.map((item, index) => {
           const Icon = item.icon; //设置icon 的data
           return (
@@ -20,7 +21,7 @@ export default function Subtitle({ detail, button }) {
       </div>
       {/* display only pad, laptop 14' */}
       <div className="d-flex d-xl-none flex-column">
-        <Datepicker />
+        {datePicker === true ? <Datepicker /> : ""}
 
         <div className="mt-2 d-flex d-xl-none justify-content-start gap-3">
           {button.map((item, index) => {
@@ -45,4 +46,5 @@ Subtitle.propTypes = {
       icon: PropTypes.elementType.isRequired,
     }),
   ),
+  datePicker: PropTypes.bool.isRequired,
 };
