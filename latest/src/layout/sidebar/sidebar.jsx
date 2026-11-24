@@ -1,17 +1,16 @@
 import {
   DashboardFilled,
-
   OrderedListOutlined,
   ProductFilled,
-    UserAddOutlined,
+  UserAddOutlined,
   UserOutlined,
-
 } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import PropTypes from "prop-types";
-
+import { useNavigate } from "react-router-dom";
 const { Sider } = Layout;
 export default function Sidebar({ collapsed }) {
+  const navigate = useNavigate();
   const items = [
     {
       key: "/",
@@ -24,12 +23,12 @@ export default function Sidebar({ collapsed }) {
       label: "Product",
     },
     {
-        key: "order",
-        icon: <OrderedListOutlined/>,
-        label: "Order"
+      key: "order",
+      icon: <OrderedListOutlined />,
+      label: "Order",
     },
     {
-      key: "User",
+      key: "user",
       icon: <UserOutlined />,
       label: "User",
     },
@@ -37,7 +36,7 @@ export default function Sidebar({ collapsed }) {
       key: "Admin",
       icon: <UserAddOutlined />,
       label: "Employee",
-    }, 
+    },
   ];
   return (
     <>
@@ -57,8 +56,9 @@ export default function Sidebar({ collapsed }) {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={["1"]}
+          defaultSelectedKeys={["/"]}
           items={items}
+          onClick={({ key }) => navigate(key)}
         />
       </Sider>
     </>
