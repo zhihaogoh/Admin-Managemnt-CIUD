@@ -48,17 +48,20 @@ export default function Product() {
             title: "Total Active Skus",
             total: 1420,
             icon: CheckOutlined,
+            statistic : true
           },
           {
             title: "Low Stock Alerts",
             total: 14,
             subtitle: "Items",
             icon: WarningFilled,
+            progress : true
           },
           {
             title: "Inventory Valuation",
             total_amount: 850000.0,
             icon: WalletFilled,
+            statistic : true
           },
           {
             title: "Out for stock",

@@ -1,5 +1,7 @@
 import Card from "antd/es/card/Card";
 import PropTypes from "prop-types";
+import Charts from "../Charts/charts";
+import ProgressStatus from "../progress/progress";
 
 export default function CardReport({ card_report }) {
   return (
@@ -18,12 +20,12 @@ export default function CardReport({ card_report }) {
               <div className="title">
                 <div className="subtitle">
                   <h2>{item.title}</h2>
-                  <p>
+                  <h4>
                     {Number.isFinite(amount)
                       ? `RM ${amount.toFixed(2)}`
                       : item.total}{" "}
                     {item.subtitle}
-                  </p>
+                  </h4>
                 </div>
                 <Icon className="icon" />
               </div>
@@ -35,25 +37,30 @@ export default function CardReport({ card_report }) {
                 )}
                 <span>{item.sub}</span>
               </div>
-              <div className="detail">
-                {item.report_detail ? (
-                  <div className="report_detail">
-                    <span>{item.report_detail}</span>
-                    <span>{item.report_detail_data}</span>
-                  </div>
-                ) : (
-                  <div className="status">
-                    <span className="warring">{item.warring}</span>
-                    {item.success ? (
-                      <span className="success">{item.success}</span>
-                    ) : (
-                      ""
-                    )}
-
-                    <span className="danger">{item.danger}</span>
-                  </div>
-                )}
-              </div>
+              {item.status === true ? (
+                <div className="detail">
+                  {item.report_detail ? (
+                    <div className="report_detail">
+                      <span>{item.report_detail}</span>
+                      <span>{item.report_detail_data}</span>
+                    </div>
+                  ) : (
+                    <div className="status">
+                      <span className="warring">{item.warring}</span>
+                      {item.success ? (
+                        <span className="success">{item.success}</span>
+                      ) : (
+                        ""
+                      )}
+                      <span className="danger">{item.danger}</span>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                ""
+              )}
+              {item.statistic === true ? <Charts /> : ""}
+              {item.progress === true ? <ProgressStatus /> :""}
             </Card>
           );
         })}
@@ -77,6 +84,9 @@ CardReport.propTypes = {
       warring: PropTypes.string.isRequired,
       success: PropTypes.string.isRequired,
       danger: PropTypes.string.isRequired,
+      statistic: PropTypes.bool.isRequired,
+      status: PropTypes.bool.isRequired,
+      progress : PropTypes.bool.isRequired
     }),
   ),
 };
