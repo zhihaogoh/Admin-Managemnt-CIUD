@@ -28,9 +28,9 @@ export default function Sidebar({ collapsed }) {
       label: "Order",
     },
     {
-      key: "user",
+      key: "customer",
       icon: <UserOutlined />,
-      label: "User",
+      label: "Customer",
     },
     {
       key: "Admin",
