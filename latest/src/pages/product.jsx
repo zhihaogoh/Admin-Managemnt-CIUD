@@ -12,6 +12,8 @@ import {
 } from "@ant-design/icons";
 import CardReport from "../components/card/card_report";
 import Fliter from "../components/fliter/fliter";
+import { product } from "../data/data";
+import ListingProduct from "../components/product/listing_product";
 
 export default function Product() {
   return (
@@ -86,6 +88,7 @@ export default function Product() {
         ]}
       />
       <Fliter />
+      <ListingProduct  product = {product}/>
     </>
   );
 }

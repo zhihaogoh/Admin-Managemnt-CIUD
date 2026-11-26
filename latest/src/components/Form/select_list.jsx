@@ -2,7 +2,6 @@ import { Select } from "antd";
 import PropTypes from "prop-types";
 
 export default function SelectList({ option }) {
-  console.log(option);
   return (
     <>
       <Select

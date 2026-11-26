@@ -142,7 +142,6 @@ body {
     gap: 1rem;
 
     span {
-  
       font-size: 1rem;
       font-weight: 400;
       line-height: 1;
@@ -166,7 +165,7 @@ body {
       line-height: 1;
       margin: 0;
     }
-    h2{
+    h2 {
       color: black;
       font-size: 1rem;
       font-weight: bold;
@@ -241,16 +240,16 @@ body {
           font-weight: bold;
         }
       }
-      .pending{
+      .pending {
         background: goldenrod;
       }
-      .transmit{
+      .transmit {
         background: #4aa3f1;
       }
-      .delivery{
+      .delivery {
         background: plum;
       }
-      .success{
+      .success {
         background: green;
       }
       .status {
@@ -286,9 +285,40 @@ body {
 //card_progress_starus end
 
 //fliter
-.fliter{
+.fliter {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+}
+//list_product
+.list_book {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  .icon {
+    font-size: 2rem;
+  }
+  h1 {
+    margin: 0;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: bold;
+  }
+  span {
+    color: #000;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 300;
+  }
+}
+
+.stock{
+  border-radius: 7px;
+  font-size: 1rem;
+      line-height: 1;
+    font-weight: 500;
 }

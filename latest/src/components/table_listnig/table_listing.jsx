@@ -72,12 +72,25 @@ import { Table } from "antd";
 //     tags: ["cool", "teacher"],
 //   },
 // ];
-export default function TableListing({ title, columns, data, rowKey = "key" }) {
+export default function TableListing({
+  title,
+  columns,
+  data,
+  rowKey = "key",
+  pagination,
+  scroll,
+}) {
   return (
     <>
-      <div className="py-3 table_llisting">
-        <Title title={title} />
-        <Table columns={columns} dataSource={data} rowKey={rowKey} />
+      <div className="table_llisting">
+        {title ? <Title title={title} /> : ""}
+        <Table
+          columns={columns}
+          dataSource={data}
+          rowKey={rowKey}
+          pagination={{ pageSize: pagination }}
+          scroll={{ x: scroll }}
+        />
       </div>
     </>
   );
@@ -103,4 +116,6 @@ TableListing.propTypes = {
       status: PropTypes.string.isRequired,
     }),
   ),
+  pagination: PropTypes.number.isRequired,
+  scroll: PropTypes.number.isRequired,
 };
