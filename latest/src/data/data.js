@@ -246,7 +246,7 @@ export const product = [
             "categories_name": "Fiction"
         },
         "book_price": 76.9,
-        "book_quantity": 33,
+        "book_quantity": 0,
         //add data
         "book_quantity_max": 100,
         "book_description": "Jane Eyre by Charlotte Brontë. A classic fiction,\n    title for the Havan Bookstore collection.",

@@ -58,14 +58,16 @@ export default function ListingProduct({ product }) {
               const color = isOut ? "#ff4d4f" : isLow ? "#faad14" : "#52c41a";
 
               const label = isOut
-                ? `0/${maxStock} Max`
+                ? `Stock out`
                 : isLow
                   ? `Reorder at ${reorderLevel}`
                   : "Max stock";
               return (
                 <div style={{ minWidth: 140 }}>
                   <Flex justify="space-between">
-                    <Typography.Text style={{ color }}>{stock} units</Typography.Text>
+                    <Typography.Text style={{ color }}>
+                      {stock} units
+                    </Typography.Text>
 
                     <Typography.Text type="secondary" style={{ fontSize: 11 }}>
                       {label}
@@ -130,7 +132,7 @@ ListingProduct.propTypes = {
       book_isbn: PropTypes.string.isRequired,
       book_price: PropTypes.number.isRequired,
       book_quantity: PropTypes.number.isRequired,
-      book_quantity_max : PropTypes.number.isRequired,
+      book_quantity_max: PropTypes.number.isRequired,
       category: PropTypes.shape({
         categories_name: PropTypes.string.isRequired,
       }),
