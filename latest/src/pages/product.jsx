@@ -11,6 +11,7 @@ import {
   WarningFilled,
 } from "@ant-design/icons";
 import CardReport from "../components/card/card_report";
+import Fliter from "../components/fliter/fliter";
 
 export default function Product() {
   return (
@@ -47,30 +48,44 @@ export default function Product() {
           {
             title: "Total Active Skus",
             total: 1420,
+            percentage: 32,
+            sub: "this month",
             icon: CheckOutlined,
-            statistic : true
+            statistic: true,
           },
           {
             title: "Low Stock Alerts",
             total: 14,
             subtitle: "Items",
+            sub: "Requires reorder attention",
             icon: WarningFilled,
-            progress : true
+            progress: true,
           },
           {
             title: "Inventory Valuation",
             total_amount: 850000.0,
             icon: WalletFilled,
-            statistic : true
+            percentage: 4.2,
+            sub: "cost basis vs Q3",
+            statistic: true,
           },
           {
             title: "Out for stock",
             total: 3,
             subtitle: "Items",
+            sub: (
+              <>
+                <ShoppingCartOutlined /> In transit: 420 units
+              </>
+            ),
             icon: ShoppingCartOutlined,
+            status : true,
+            report_detail: "Replenishment ETA",
+            report_detail_data: "Tomorrow 08:00",
           },
         ]}
       />
+      <Fliter />
     </>
   );
 }

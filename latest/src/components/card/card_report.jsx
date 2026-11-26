@@ -2,6 +2,8 @@ import Card from "antd/es/card/Card";
 import PropTypes from "prop-types";
 import Charts from "../Charts/charts";
 import ProgressStatus from "../progress/progress";
+import { Statistic } from "antd";
+import { ArrowUpOutlined } from "@ant-design/icons";
 
 export default function CardReport({ card_report }) {
   return (
@@ -31,7 +33,13 @@ export default function CardReport({ card_report }) {
               </div>
               <div className="percentage">
                 {item.percentage ? (
-                  <span className="percentages">+{item.percentage}%</span>
+                  <Statistic
+                    value={item.percentage}
+                    precision={2}
+                    styles={{ content: { color: "#3f8600", display: "flex" } }}
+                    prefix={<ArrowUpOutlined />}
+                    suffix="%"
+                  />
                 ) : (
                   ""
                 )}
@@ -42,7 +50,7 @@ export default function CardReport({ card_report }) {
                   {item.report_detail ? (
                     <div className="report_detail">
                       <span>{item.report_detail}</span>
-                      <span>{item.report_detail_data}</span>
+                      <h2>{item.report_detail_data}</h2>
                     </div>
                   ) : (
                     <div className="status">
@@ -60,7 +68,7 @@ export default function CardReport({ card_report }) {
                 ""
               )}
               {item.statistic === true ? <Charts /> : ""}
-              {item.progress === true ? <ProgressStatus /> :""}
+              {item.progress === true ? <ProgressStatus /> : ""}
             </Card>
           );
         })}
@@ -86,7 +94,7 @@ CardReport.propTypes = {
       danger: PropTypes.string.isRequired,
       statistic: PropTypes.bool.isRequired,
       status: PropTypes.bool.isRequired,
-      progress : PropTypes.bool.isRequired
+      progress: PropTypes.bool.isRequired,
     }),
   ),
 };
