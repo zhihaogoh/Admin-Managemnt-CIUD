@@ -3,7 +3,6 @@ import Datepicker from "../Datepicker/datepicker";
 import { Button } from "antd";
 
 export default function Subtitle({ detail, button, datePicker }) {
-  console.log(datePicker)
   return (
     <div className="subtitle my-3">
       <p>{detail}</p>

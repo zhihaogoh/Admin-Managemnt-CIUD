@@ -1,12 +1,12 @@
 import BreadCrumb from "../components/Breadcrumb/breadcrumb";
 import Title from "../components/title/title";
 import Subtitle from "../components/subtitle/sub_title";
-import RefIcon from "@ant-design/icons/es/icons/HistoryOutlined";
 import {
   DeliveredProcedureOutlined,
   DownloadOutlined,
   MoneyCollectFilled,
   ProductFilled,
+  RedoOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 import CardReport from "../components/card/card_report";
@@ -27,7 +27,7 @@ export default function Dashboard() {
         button={[
           {
             name: "Refresh",
-            icon: RefIcon,
+            icon: RedoOutlined,
           },
           {
             name: "Export",
