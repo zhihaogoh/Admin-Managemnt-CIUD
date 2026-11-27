@@ -1,4 +1,11 @@
-import { CheckOutlined, DownloadOutlined, FileAddFilled, ShoppingCartOutlined, WalletFilled, WarningFilled } from "@ant-design/icons";
+import {
+  DownloadOutlined,
+  FileAddFilled,
+  ShoppingCartOutlined,
+  UserOutlined,
+  WalletFilled,
+  WarningFilled,
+} from "@ant-design/icons";
 import BreadCrumb from "../components/Breadcrumb/breadcrumb";
 import Subtitle from "../components/subtitle/sub_title";
 import Title from "../components/title/title";
@@ -7,14 +14,11 @@ import Fliter from "../components/fliter/fliter";
 import ListingProduct from "../components/product/listing_product";
 import { product } from "../data/data";
 
-export default function Customer(){
-    return(
-        <>
+export default function Customer() {
+  return (
+    <>
       <BreadCrumb
-        items={[
-          { name: "Dashboard", path: "/" },
-          { name: "Customer" },
-        ]}
+        items={[{ name: "Dashboard", path: "/" }, { name: "Customer" }]}
       />
       <Title title={"Customer"} />
       <Subtitle
@@ -36,11 +40,11 @@ export default function Customer(){
       <CardReport
         card_report={[
           {
-            title: "Total Active Skus",
-            total: 1420,
-            percentage: 32,
-            sub: "this month",
-            icon: CheckOutlined,
+            title: "Total Customers",
+            total: 18490,
+            percentage: 92,
+            sub: "+1,120 this month",
+            icon: UserOutlined,
             statistic: true,
           },
           {
@@ -52,31 +56,51 @@ export default function Customer(){
             progress: true,
           },
           {
-            title: "Inventory Valuation",
-            total_amount: 850000.0,
+            title: "Average Order Value (AOV)",
+            total_amount: 142.8,
             icon: WalletFilled,
-            percentage: 4.2,
-            sub: "cost basis vs Q3",
+            percentage: 8.4,
+            sub: "Target $150",
             statistic: true,
           },
           {
-            title: "Out for stock",
-            total: 3,
-            subtitle: "Items",
+            title: "Repeat Purchase Rate",
+            total: 38.6,
+            subtitle: "Benchmark 31%",
             sub: (
               <>
                 <ShoppingCartOutlined /> In transit: 420 units
               </>
             ),
             icon: ShoppingCartOutlined,
-            status : true,
-            report_detail: "Replenishment ETA",
-            report_detail_data: "Tomorrow 08:00",
+            percentage: 42,
+
+            statistic: true,
           },
         ]}
       />
-      <Fliter />
-      <ListingProduct  product = {product}/>
+      <Fliter
+        placeholder="Search by customer name, email, company, phone, ID..."
+        categories={[
+          {
+            value: 0,
+            label: "Categories type",
+          },
+          {
+            value: 1,
+            label: "Member",
+          },
+          {
+            value: 2,
+            label: "Non member",
+          },
+          {
+            value: 3,
+            label: "Company",
+          },
+        ]}
+      />
+      <ListingProduct product={product} />
     </>
-    )
+  );
 }

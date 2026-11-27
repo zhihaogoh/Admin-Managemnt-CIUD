@@ -87,7 +87,46 @@ export default function Product() {
           },
         ]}
       />
-      <Fliter />
+      <Fliter 
+        placeholder = "Search by product name, SKU, barcode, supplier..."
+        categories = {[
+            {
+              value: 0,
+              label: "All Categories",
+            },
+            {
+              value: 1,
+              label: "Fiction",
+            },
+            {
+              value: 2,
+              label: "Non Fiction",
+            },
+            {
+              value: 3,
+              label: "History",
+            },
+          ]}
+          status = {[
+            {
+              value: 0,
+              label: "All Status",
+            },
+            {
+              value: 1,
+              label: "Packing",
+            },
+            {
+              value: 2,
+              label: "Deliver",
+            },
+            {
+              value: 3,
+              label: "Recliver",
+            },
+          ]}
+      
+      />
       <ListingProduct  product = {product}/>
     </>
   );

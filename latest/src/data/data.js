@@ -262,3 +262,96 @@ export const product = [
     }
 
 ]
+
+export const users = [
+    {
+        "id": 1,
+        "first_name": "Test",
+        "last_name": "User",
+        "email": "test@example.com",
+        "token": null,
+        "email_verified_at": null,
+        "status": 0,
+        "user_role": "user",
+        "phone_number": null,
+        "gender": null,
+        "date_of_birth": null,
+        "created_at": "2026-11-14T11:18:22.000000Z",
+        "updated_at": "2026-11-14T11:18:22.000000Z"
+    },
+    {
+        "id": 2,
+        "first_name": "ABC",
+        "last_name": "abc",
+        "email": "Abc@gmail.com",
+        "token": null,
+        "email_verified_at": null,
+        "status": 0,
+        "user_role": "user",
+        "phone_number": null,
+        "gender": null,
+        "date_of_birth": null,
+        "created_at": "2026-11-14T11:18:23.000000Z",
+        "updated_at": "2026-11-16T11:24:52.000000Z"
+    },
+    {
+        "id": 3,
+        "first_name": "DEF",
+        "last_name": "def",
+        "email": "Def@gmail.com",
+        "token": "8|pCEkz5YJNSwC218Puz2ZO8Pe33aZCl6H7fGtMIBr273d4b3d",
+        "email_verified_at": null,
+        "status": 0,
+        "user_role": "user",
+        "phone_number": null,
+        "gender": null,
+        "date_of_birth": null,
+        "created_at": "2026-11-14T11:18:23.000000Z",
+        "updated_at": "2026-11-16T11:25:11.000000Z"
+    },
+    {
+        "id": 4,
+        "first_name": "GHI",
+        "last_name": "ghi",
+        "email": "Ghi@gmail.com",
+        "token": null,
+        "email_verified_at": null,
+        "status": 0,
+        "user_role": "user",
+        "phone_number": null,
+        "gender": null,
+        "date_of_birth": null,
+        "created_at": "2026-11-14T11:18:24.000000Z",
+        "updated_at": "2026-11-14T11:18:24.000000Z"
+    },
+    {
+        "id": 5,
+        "first_name": "JKL",
+        "last_name": "jkl",
+        "email": "Jkl@gmail.com",
+        "token": null,
+        "email_verified_at": null,
+        "status": 0,
+        "user_role": "admin",
+        "phone_number": null,
+        "gender": null,
+        "date_of_birth": null,
+        "created_at": "2026-11-14T11:18:24.000000Z",
+        "updated_at": "2026-11-14T11:18:24.000000Z"
+    },
+    {
+        "id": 6,
+        "first_name": "Goh",
+        "last_name": "Zhihao",
+        "email": "zhihaogoh719@gmail.com",
+        "token": "9|9wqrvaHK7SQmBR4cZo3L52ANhauH4OWBvWel91cN15755e84",
+        "email_verified_at": null,
+        "status": 0,
+        "user_role": "user",
+        "phone_number": null,
+        "gender": null,
+        "date_of_birth": null,
+        "created_at": "2026-11-15T08:10:33.000000Z",
+        "updated_at": "2026-11-16T11:57:46.000000Z"
+    }
+]

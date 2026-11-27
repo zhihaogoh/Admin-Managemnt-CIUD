@@ -1,12 +1,12 @@
 import { Select } from "antd";
 import PropTypes from "prop-types";
 
-export default function SelectList({ option }) {
+export default function SelectList({ option = [] }) {
   return (
     <>
       <Select
         className="w-50"
-        defaultValue={option[0].label}
+        defaultValue={option[0]?.label}
         options={option}
       />
     </>
@@ -14,11 +14,10 @@ export default function SelectList({ option }) {
 }
 
 SelectList.propTypes = {
-  option:
-    PropTypes.shape[
-      {
-        value: PropTypes.number.isRequired,
-        label: PropTypes.string.isRequired,
-      }
-    ],
+  option: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ),
 };
