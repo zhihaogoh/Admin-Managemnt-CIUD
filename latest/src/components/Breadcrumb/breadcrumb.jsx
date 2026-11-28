@@ -15,7 +15,7 @@ BreadCrumb.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      path: PropTypes.string.isRequired,
+      path: PropTypes.string,
     }),
   ),
 };

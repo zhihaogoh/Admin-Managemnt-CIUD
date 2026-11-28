@@ -97,7 +97,7 @@ export default function TableListing({
 }
 
 TableListing.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   rowKey: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   columns: PropTypes.arrayOf(
     PropTypes.shape({
@@ -107,15 +107,8 @@ TableListing.propTypes = {
       render: PropTypes.func,
     }),
   ),
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      order_id: PropTypes.string.isRequired,
-      customer: PropTypes.string.isRequired,
-      items: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired,
-      status: PropTypes.string.isRequired,
-    }),
-  ),
+  data: PropTypes.arrayOf(PropTypes.object),
+ 
   pagination: PropTypes.number.isRequired,
   scroll: PropTypes.number.isRequired,
 };

@@ -355,3 +355,45 @@ export const users = [
         "updated_at": "2026-11-16T11:57:46.000000Z"
     }
 ]
+
+export const addresses = [
+    {
+        "id": 1,
+        "user_id": 1,
+        "recipient_name": "John Doe",
+        "recipent_phone": "1234567890",
+        "address_1": "123 Main St",
+        "address_2": "Apt 4B",
+        "city": "New York",
+        "state": "NY",
+        "postal_code": "10001",
+        "country": "USA",
+        "status": true
+    },
+    {
+        "id": 2,
+        "user_id": 2,
+        "recipient_name": "Jane Smith",
+        "recipent_phone": "0987654321",
+        "address_1": "456 Elm St",
+        "address_2": "e",
+        "city": "Los Angeles",
+        "state": "CA",
+        "postal_code": "90001",
+        "country": "USA",
+        "status": true
+    },
+    {
+        "id": 3,
+        "user_id": 6,
+        "recipient_name": "Goh Zhihao",
+        "recipent_phone": "+6011-10841073",
+        "address_1": "106, Jalan Bintang Emas 9",
+        "address_2": "Taman Bintang Emas",
+        "city": "Muar",
+        "state": "Johor",
+        "postal_code": "84300",
+        "country": "Malaysia",
+        "status": true
+    }
+]

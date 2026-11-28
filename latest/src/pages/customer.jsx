@@ -11,10 +11,11 @@ import Subtitle from "../components/subtitle/sub_title";
 import Title from "../components/title/title";
 import CardReport from "../components/card/card_report";
 import Fliter from "../components/fliter/fliter";
-import ListingProduct from "../components/product/listing_product";
-import { product } from "../data/data";
+import ListingCustomer from "../components/customer/listing_customer";
+import { users } from "../data/data";
 
 export default function Customer() {
+  
   return (
     <>
       <BreadCrumb
@@ -100,7 +101,7 @@ export default function Customer() {
           },
         ]}
       />
-      <ListingProduct product={product} />
+      <ListingCustomer customer={users} />
     </>
   );
 }
